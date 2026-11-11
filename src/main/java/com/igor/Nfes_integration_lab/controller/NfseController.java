@@ -1,6 +1,7 @@
 package com.igor.Nfes_integration_lab.controller;
 
 import com.igor.Nfes_integration_lab.dto.request.NfseRequest;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class NfseController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<Void> validate(@RequestBody NfseRequest nfseRequest){
+    public ResponseEntity<Void> validate(@RequestBody @Valid NfseRequest nfseRequest){
         return ResponseEntity.ok().build();
     }
 }
