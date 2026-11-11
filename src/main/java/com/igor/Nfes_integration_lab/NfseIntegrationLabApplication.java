@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NfesIntegrationLabApplication {
+public class NfseIntegrationLabApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NfesIntegrationLabApplication.class, args);
+		SpringApplication.run(NfseIntegrationLabApplication.class, args);
 	}
 
 }

@@ -1,8 +1,16 @@
 package com.igor.Nfes_integration_lab.dto.request;
 
+import jakarta.validation.Valid;
+
 public record NfseRequest(
-        ProviderRequest providerRequest,
-        CustomerRequest customerRequest,
-        ServiceRequest serviceRequest
+
+        @Valid
+        ProviderRequest provider,
+
+        @Valid
+        CustomerRequest customer,
+
+        @Valid
+        ServiceRequest service
 ) {
 }
