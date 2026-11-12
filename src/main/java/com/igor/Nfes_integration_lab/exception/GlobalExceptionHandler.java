@@ -34,4 +34,18 @@ public class GlobalExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
     }
+
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<ErrorMessage> handleBusinessException(BusinessException ex, HttpServletRequest request){
+        ErrorMessage errorMessage = new ErrorMessage(
+                Instant.now(),
+                400,
+                "BAD_REQUEST",
+                ex.getMessage(),
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
+    }
+
 }
